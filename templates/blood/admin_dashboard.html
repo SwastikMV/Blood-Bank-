@@ -1,0 +1,186 @@
+{% extends 'blood/adminbase.html' %}
+{% block content %}
+<br><br>
+<style>
+    .bg-custom-color {
+        background-color: #f5e3a9a0; /* Replace with your desired color */
+    }
+    .bg-custom-color2 {
+        background-color: #c0e8c9; /* Replace with your desired color */
+    }
+
+</style>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-5">
+          <div class="card bg-custom-color">
+            <div class="card-body">
+                <div>
+                    <i class="fas fa-tint " ></i>
+                    {{A1.unit}}ml
+                </div> 
+                <div class="blood">
+                    
+                     <h2>A+<i class="fas fa-medkit " ></i></h2>
+                </div><br><br>
+                                           
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card bg-custom-color">
+                <div class="card-body">
+                    <div>
+                        <i class="fas fa-tint " ></i>{{B1.unit}}ml
+                      </div> 
+                    <div class="blood">
+                        <h2>B+ <i class="fas fa-medkit "></i></h2>
+                    </div><br><br>
+                                       
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card bg-custom-color">
+                <div class="card-body">
+                    <div>
+                        <i class="fas fa-tint " ></i>{{O1.unit}}ml
+                      </div>  
+                    <div class="blood">
+                        <h2>O+ <i class="fas fa-medkit "></i></h2>
+                    </div><br><br>
+                                             
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="card bg-custom-color">
+                <div class="card-body">
+                    <div>
+                        <i class="fas fa-tint " ></i> {{AB1.unit}}ml
+                      </div>  
+                    <div class="blood">
+                        <h2>AB+ <i class="fas fa-medkit "></i></h2>
+                    </div><br><br>
+                                      
+                </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="card bg-custom-color">
+            <div class="card-body">
+                <div>
+                    <i class="fas fa-tint " ></i>  {{A2.unit}}ml
+                  </div>  
+                <div class="blood">
+                    <h2>A- <i class="fas fa-medkit "></i></h2>
+                </div><br><br>
+                                          
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card bg-custom-color">
+                <div class="card-body">
+                    <div>
+                        <i class="fas fa-tint " ></i> {{B2.unit}}ml
+                      </div> 
+                    <div class="blood">
+                        <h2>B- <i class="fas fa-medkit "></i></h2>
+                    </div><br><br>
+                                              
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card bg-custom-color">
+                <div class="card-body">
+                    <div>
+                        <i class="fas fa-tint " ></i>{{O2.unit}}ml
+                      </div>  
+                    <div class="blood">
+                        <h2>O- <i class="fas fa-medkit "></i></h2>
+                    </div><br><br>
+                                             
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="card bg-custom-color">
+                <div class="card-body">
+                    <div>
+                        <i class="fas fa-tint " ></i>{{AB2.unit}}ml
+                      </div>  
+                    <div class="blood">
+                        <h2>AB- <i class="fas fa-medkit "></i></h2>
+                    </div><br><br>
+                                            
+                </div>
+              </div>
+          </div>
+      </div>
+<hr>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="card bg-custom-color2">
+          <div class="card-body">
+              <div class="blood">
+                  <i class="fas fa-users" style="color: #1e88e5;"></i>
+              </div><br>
+              <div>
+                  Available Donors <br>
+                  {{totaldonors}}
+              </div>                            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+          <div class="card bg-custom-color2">
+              <div class="card-body">
+                  <div class="blood">
+                      <i class="fas fa-spinner" style="color:#1e88e5;"></i>
+                  </div><br>
+                  <div>
+                      Total Requests <br>
+                     {{totalrequest}}
+                  </div>                            
+              </div>
+            </div>
+      </div>
+     
+        <div class="col-sm-5">
+          <div class="card bg-custom-color2">
+              <div class="card-body">
+                  <div class="blood">
+                      <i class="fas fa-tint xyz" style="color:#f70d0d;"></i>
+                  </div><br>
+                  <div>
+                      Total Blood Unit (ml) <br>
+                      {{totalbloodunit}}
+                  </div>                            
+              </div>
+            </div>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="card bg-custom-color2">
+                <div class="card-body">
+                    <div class="blood">
+                        <i class="far fa-check-circle" style="color:rgb(0, 128, 2);"></i>
+                    </div><br>
+                    <div>
+                        Approved Requests <br>
+                        {{totalapprovedrequest}}
+                    </div>                            
+                </div>
+              </div>
+          </div>
+    </div>
+</div>
+
+
+{% endblock content %}

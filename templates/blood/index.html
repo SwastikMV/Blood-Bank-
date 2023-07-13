@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+    <style>
+        .xyz{
+          background-image: url('{% static "image/main4-transformed.png" %}');
+          background-size:cover;
+          background-repeat: no-repeat;
+        }
+        body {
+    background-color: #322B2B;
+}
+
+.arrow {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    display: block;
+    width: 3vw;
+    height: 3vw;
+    border-bottom: 8px solid rgba(0, 0, 0, 0.397);
+    border-right: 8px solid rgb(0, 0, 0);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 1.5s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.1s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.2s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+      
+      </style>
+      
+</head>
+
+
+<body>
+  {% include "blood/navbar.html" %}
+<br><br><br>
+<section id="section-jumbotron" style="margin-bottom:-10px;margin-top: -15px" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center">
+        <br><br> <br><br><br><b><h1 class="text-dark" >"Donate Blood and Save Lives!"</h1></b><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>  
+    </div>
+    <div class="arrow">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+  </section>
+  <br>
+  <!-- <div class="jumbotron" style="margin-top: 0px;margin-bottom: -10px;background-color: #c32d22;">
+
+     <p class="lead text-center">Welcome To Blood Bank Management System
+      </p>  
+      <center><h2 style="color:white;">WELCOME TO BLOOD BANK MANAGEMENT SYSTEM</h2></center>
+    
+    <p class="text-center">- Available Features: Patient Login, Donor Login, Admin Login -</p> 
+    
+  </div> -->
+  <div class="jumbotron"style="margin-top: 0px;margin-bottom: -10px;height:300px;">
+    <center><h1 class="display-4">ABOUT</h1></center>
+    <h2>Overview</h2>
+    <p class="lead">Blood donation is a voluntary procedure that can help save lives. Millions of people need blood transfusions each year. Some may need blood during surgery. Others depend on it after an accident or because they have a disease that requires certain parts of blood. Blood donation makes all of this possible. There is no substitute for human blood — all transfusions use blood from a donor.</p>
+
+  </div><br>
+  <div class="jumbotron"style="margin-top: 10px;margin-bottom: -10px;">
+        <h2>Eligibity Requirements</h2>
+    <p class="lead">To be eligible to donate whole blood, plasma or platelets, you must be:<br>
+    <ul>
+      <li>In good health.</li>
+      <li>At least 16 or 17 years old, depending on the law in your state. Some states allow legal minors to donate with parent permission. While there's no legal upper age limit, policies may vary between individual donor centers.</li>
+      <li>At least 110 pounds (about 50 kilograms).</li>
+      <li>Able to pass the physical and health-history assessments.</li>
+    </ul>
+    </p>
+   </div><br>
+  <div class="jumbotron"style="margin-top: 10px;margin-bottom: -10px;">
+    <h2>Risks</h2>
+    <p class="lead">Blood donation is safe. New, sterile disposable equipment is used for each donor, so there's no risk of getting a bloodborne infection by donating blood.<br>
+      Most healthy adults can donate a pint (about half a liter) safely, without health risks. Within a few days of a blood donation, your body replaces the lost fluids. And after two weeks, your body replaces the lost red blood cells.
+    </p>
+  </div><br>
+  <div class="jumbotron"style="margin-top: 10px;margin-bottom: -10px;">
+    <h2>Food and medication</h2>
+    <p class="lead">Before your blood donation:<br>
+      <ul>
+        <li>Get plenty of sleep the night before you plan to donate.</li>
+        <li>Eat a healthy meal before your donation. Avoid fatty foods, such as a hamburger, fries or ice cream.</li>
+        <li>Drink plenty of water before the donation.</li>
+        <li>Check to see if any medications you are taking or recently took would prevent you from donating. For example, if you are a platelet donor, you must not take aspirin for two days prior to donating. Talk to a member of your health care team before you stop taking any medications in order to donate blood.</li>
+        <li>Wear a shirt with sleeves that can be rolled up.</li>
+      </ul>
+    </p>  </div><br>
+  <div class="jumbotron"style="margin-top: 10px;margin-bottom: -10px;">
+    <!-- <hr class="my-4"> -->
+    <center> <h3 class="display-5">"It's not every day you can save a life. Today, you can."</h3><br>
+     <p class="lead">
+       <a class="btn btn-primary btn-lg" href="/" role="button">Move to top</a>
+     </p></center>
+    </div><br>
+
+
+
+
+
+  <!-- <div class="jumbotron"style="margin-top: 10px;margin-bottom: -10px;">
+    <center><h1 class="display-4">ABOUT</h1></center>
+    <h2>Overview</h2>
+    <p class="lead">Blood donation is a voluntary procedure that can help save lives. Millions of people need blood transfusions each year. Some may need blood during surgery. Others depend on it after an accident or because they have a disease that requires certain parts of blood. Blood donation makes all of this possible. There is no substitute for human blood — all transfusions use blood from a donor.</p>
+    <br><br>
+    <h2>Eligibity Requirements</h2>
+    <p class="lead">To be eligible to donate whole blood, plasma or platelets, you must be:<br>
+    <ul>
+      <li>In good health.</li>
+      <li>At least 16 or 17 years old, depending on the law in your state. Some states allow legal minors to donate with parent permission. While there's no legal upper age limit, policies may vary between individual donor centers.</li>
+      <li>At least 110 pounds (about 50 kilograms).</li>
+      <li>Able to pass the physical and health-history assessments.</li>
+    </ul>
+    </p><br><br>
+    <h2>Risks</h2>
+    <p class="lead">Blood donation is safe. New, sterile disposable equipment is used for each donor, so there's no risk of getting a bloodborne infection by donating blood.<br>
+      Most healthy adults can donate a pint (about half a liter) safely, without health risks. Within a few days of a blood donation, your body replaces the lost fluids. And after two weeks, your body replaces the lost red blood cells.
+    </p><br><br>
+    <h2>Food and medication</h2>
+    <p class="lead">Before your blood donation:<br>
+      <ul>
+        <li>Get plenty of sleep the night before you plan to donate.</li>
+        <li>Eat a healthy meal before your donation. Avoid fatty foods, such as a hamburger, fries or ice cream.</li>
+        <li>Drink plenty of water before the donation.</li>
+        <li>Check to see if any medications you are taking or recently took would prevent you from donating. For example, if you are a platelet donor, you must not take aspirin for two days prior to donating. Talk to a member of your health care team before you stop taking any medications in order to donate blood.</li>
+        <li>Wear a shirt with sleeves that can be rolled up.</li>
+      </ul>
+    </p>
+
+   
+    <hr class="my-4">
+   <center> <h3 class="display-5">"It's not every day you can save a life. Today, you can."</h3><br>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Move to top</a>
+    </p></center>
+  </div> -->
+  {% include "blood/footer.html" %}
+
+
+</body>
+
+</html>
